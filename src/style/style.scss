@@ -1,5 +1,6 @@
 @import "~ed-grid/ed-grid";
 @import "~edteam-style-guides/edteam-style-guides";
+
 $darkColor      : #282D31;
 $textColor      : #53575A;
 $borderColor    : #DFE0E0;
@@ -70,7 +71,7 @@ a {
         right: 0;
     }
 
-    @include from(m) {
+    @include from(l) {
         position: static;
         background: transparent;
         width: auto;
@@ -83,7 +84,7 @@ a {
 .main-menu {
     margin: 0;
     padding: 0;
-    @include from(m) {
+    @include from(l) {
        display: flex;
     }
 }
@@ -103,7 +104,7 @@ a {
                                 $darkColor 80%, $darkColor 100%
                                 );
     
-    @include from(m) {
+    @include from(l) {
         display: none;
     }
 }

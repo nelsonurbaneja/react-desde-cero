@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
+import Banner from './Banner'
 
-class Formulario extends Component {
+class Form extends Component {
     constructor(props) {
         super(props)
 
@@ -28,6 +29,8 @@ class Formulario extends Component {
 
     render() {
         return (
+            <>
+            <Banner title={`Formulario`} subtitle={`Tu futuro esta en tus manos`} link={`Ir`} />
             <form>
                 <div className="ed-container l-section l-90">
                     <div className="ed-item l-50 form__item">
@@ -58,6 +61,7 @@ class Formulario extends Component {
                     </div>
                 </div>  
             </form>
+        </>
         )
     }
     componentDidMount() {
@@ -70,4 +74,4 @@ class Formulario extends Component {
     
 }
 
-export default Formulario;
+export default Form;

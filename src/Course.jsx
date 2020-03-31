@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 import React from 'react';
 
-const cursos = [
+const courses = [
     {
         id: 1,
         title: 'Curso React desde cero 2020',
@@ -35,8 +36,8 @@ const cursos = [
     }
 ]
 
-const Curso = ( { match }) => { 
-    const cursoActual = cursos.filter( curso => curso.id === parseInt(match.params.id))[0]
+const Course = ( { match }) => { 
+    const cursoActual = courses.filter( curso => curso.id === parseInt(match.params.id))[0]
         return (
             <div className="ed-grid m-grid-3">
                 {
@@ -52,4 +53,6 @@ const Curso = ( { match }) => {
         )
 }
 
-export default Curso;
+
+
+export default Course;
