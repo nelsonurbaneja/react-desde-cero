@@ -7,12 +7,10 @@ class Formulario extends Component {
         this.state = {
             name: '',
             pass: '',
-            fecha: new Date()
         }
 
         this.changeName = this.changeName.bind(this)
         this.changePass = this.changePass.bind(this)
-        this.updateFecha = this.updateFecha.bind(this)
     }   
 
     changeName(e) {
@@ -27,16 +25,10 @@ class Formulario extends Component {
         })
     }
 
-    updateFecha() {
-        this.setState({
-            fecha: new Date()
-        })
-    }
 
     render() {
         return (
             <form>
-                <h2>Fecha actual -> {Math.ceil(this.state.fecha/1000)}</h2>
                 <div className="ed-container l-section l-90">
                     <div className="ed-item l-50 form__item">
                         <label htmlFor="name">Nombre de usuario</label>
@@ -70,18 +62,12 @@ class Formulario extends Component {
     }
     componentDidMount() {
         console.log('cargado')
-        this.fechaUpdate = setInterval(() => {
-            this.updateFecha()
-        },1000)
     }
     componentDidUpdate(prevProps,prevState) {
         // console.log(prevProps) 
         // console.log(prevState)
     }
     
-    componentWillUnmount() {
-        clearInterval(this.fechaUpdate)
-    }
 }
 
 export default Formulario;

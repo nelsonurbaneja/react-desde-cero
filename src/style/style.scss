@@ -1,6 +1,143 @@
 @import "~ed-grid/ed-grid";
 @import "~edteam-style-guides/edteam-style-guides";
-
+$darkColor      : #282D31;
+$textColor      : #53575A;
+$borderColor    : #DFE0E0;
+$firstColor     : #007BDF;
+$secondColor    : #00CBFF;
+$accentColor    : #FBA905;
+$accentColorAlt : #F1A000;
+$thirdColor     : #FF3C32;
+$blanco         : #fff; 
+$headerHeight   : 4rem;
+$breakPoints : (
+    s: 320px,
+    m: 640px,
+    l: 1024px,
+    xl: 1400px
+);
 body {
     margin: 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+li {
+  list-style: none;
+}
+
+a {
+   text-decoration: none;
+}
+.l-container {
+    max-width       : 1200px;
+    height          : 100%;
+    padding-left    : 1rem;
+    padding-right   : 1rem;
+    margin-left     : auto;
+    margin-right    : auto;
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+    flex-wrap       : wrap;
+}
+.main-header {
+    height: $headerHeight;
+    border-bottom: 1px solid $borderColor;
+    background: $blanco;
+    position: relative;
+    font-size: 0.865rem;
+    // para poner fixed con el menu+
+    // position: fixed;
+    // width: 100%;
+    // top: 0;
+    // left: 0;
+    // z-index: $z-modal;
+
+}
+
+.main-nav {
+    width: 80vw;
+    position: fixed;
+    top: $headerHeight;
+    right: -100%;
+    height: calc(100vh - #{$headerHeight});
+    background: $darkColor;
+    transition: right .45s;
+
+    &.show {
+        right: 0;
+    }
+
+    @include from(m) {
+        position: static;
+        background: transparent;
+        width: auto;
+        height: auto;
+    }
+
+    z-index: $z-fixed;
+}
+
+.main-menu {
+    margin: 0;
+    padding: 0;
+    @include from(m) {
+       display: flex;
+    }
+}
+
+.main-logo {
+    height: 2rem;
+}
+
+.main-toggle {
+    width: 2rem;
+    height: 1.25rem;
+    cursor: pointer;
+    background: linear-gradient($darkColor 20%, 
+                                transparent 20%, transparent 40%,
+                                $darkColor 40%, $darkColor 60%,
+                                transparent 60%, transparent 80%,
+                                $darkColor 80%, $darkColor 100%
+                                );
+    
+    @include from(m) {
+        display: none;
+    }
+}
+
+.main-menu--links {
+    color: $borderColor;
+    text-decoration: none;
+    @include from(m) {
+        color: $textColor;
+    }
+
+    @include from(m) {
+        &:hover {
+            color: $darkColor;
+        }
+    }
+}
+
+.main-menu--items {
+    padding: 1rem;
+    border-bottom: 1px solid $borderColor;
+
+    @include from(m) {
+        padding: 0;
+        border: 0;
+        margin-left: 2rem;
+    }
+
+    &:hover {
+         background: $textColor;
+    }
+    &:hover {
+        @include from(m) {
+            background: transparent;
+        }
+    }
 }

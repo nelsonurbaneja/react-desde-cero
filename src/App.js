@@ -1,8 +1,12 @@
-import React from 'react';
-import Curso from './Curso';
-import Banner from './Banner';
-import Formulario from './Formulario';
-import './style/style.scss';
+import React from 'react'
+import CourseGrid from './CourseGrid'
+import Curso from './Curso'
+import Banner from './Banner'
+import Formulario from './Formulario'
+import CuatroCeroCuatro from './CuatroCeroCuatro'
+import MainMenu from './MainMenu'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import './style/style.scss'
 
 const cursos = [
   {
@@ -40,26 +44,29 @@ const cursos = [
 ]
 
 const App = () => (
-  <>
-    <Banner/>
-
-    <div className="ed-grid m-grid-4">
-      {
-        cursos.map(curso => 
-          <Curso 
-            id={curso.id}
-            title={curso.title}
-            image={curso.image}
-            price={curso.price}
-            teacher={curso.teacher}
-            teacherImage={curso.teacherImage}
-          />
-        )
-      }
-    </div>
-
-    <Formulario/>
-  </>
+  <Router>
+    <MainMenu/>
+    <Switch>
+        <Route path="/" exact component={ Banner } />
+        <Route path="/formulario" exact component={ Formulario } />
+        <Route path="/cursos/:id" exact component={ Curso } />
+        <Route path="/cursos" exact component={ () => <div className="ed-grid m-grid-4">
+                                                            {
+                                                              cursos.map( curso =>
+                                                                <CourseGrid
+                                                                  id={curso.id}
+                                                                  title={curso.title}
+                                                                  image={curso.image}
+                                                                  price={curso.price}
+                                                                  teacher={curso.teacher}
+                                                                  teacherImage={curso.teacherImage}
+                                                                />
+                                                                )
+                                                            }
+                                                        </div>} />
+        <Route component={ CuatroCeroCuatro } />
+    </Switch>                                                
+  </Router>
 )
 
-export default App;
+export default App
