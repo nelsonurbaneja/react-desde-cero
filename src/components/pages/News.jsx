@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import NewCard from './NewCard'
-import Menu from './Menu'
+import NewCard from '../molecules/NewCard'
+import Menu from '../molecules/Menu'
 
 class News extends Component {
     constructor(props) {

@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import Banner from './Banner'
+import Banner from '../organisms/Banner'
 
 class Form extends Component {
     constructor(props) {

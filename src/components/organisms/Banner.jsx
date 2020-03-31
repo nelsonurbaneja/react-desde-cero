@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 const Banner = ( {title, subtitle, link} ) => (
     <div className="main-banner img-container l-section diagonal" id="main-banner">
@@ -8,7 +9,7 @@ const Banner = ( {title, subtitle, link} ) => (
                 <div className="main-banner__data s-center">
                 <p className="t2 s-mb-0"> { title } </p>
                 <p> { subtitle } </p>
-                <a href="#saber-mas" className="button"> { link } </a>
+                <Link to="/cursos" className="button"> { link } </Link>
             </div>
             </div>
         </div>

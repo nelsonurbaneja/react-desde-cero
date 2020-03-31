@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import UserCard from './UserCard'
+import UserCard from '../molecules/UserCard'
 
 class Users extends Component {
     constructor(props) {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Logo from './Logo'
-import Menu from './Menu'
+import Logo from '../atoms/Logo'
+import Menu from '../molecules/Menu'
 
 const Header = () => (
     <header className="main-header">

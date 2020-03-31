@@ -1,22 +1,22 @@
 import React from 'react'
-import CourseGrid from './CourseGrid'
-import Course from './Course'
-import Banner from './Banner'
-import Form from './Form'
-import CuatroCeroCuatro from './CuatroCeroCuatro'
-import Header from './Header'
-import History from '././History'
-import Users from './Users'
-import News from './News'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import './style/style.scss'
+import CourseGrid from './pages/CourseGrid'
+import Course from './molecules/Course'
+import Home from './pages/Home'
+import Form from './pages/Form'
+import CuatroCeroCuatro from './pages/CuatroCeroCuatro'
+import Header from './organisms/Header'
+import History from './pages/History'
+import Users from './pages/Users'
+import News from './pages/News'
+import '../style/style.scss'
 
 
 const App = () => (
   <Router>
     <Header/>
     <Switch>
-        <Route path="/" exact component={ () => <Banner title={`Bienvenido a Desarrollo web`} subtitle={`Tu futuro esta en tus manos`} link={`Saber más`}/> } />
+        <Route path="/" exact component={ Home } />
         <Route path="/formulario" component={ Form } />
         <Route path="/cursos/:id" component={ Course } />
         <Route path="/historial/" component={ History } />
