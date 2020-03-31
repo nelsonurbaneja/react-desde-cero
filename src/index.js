@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './style/style.scss';
-import ComponentSaludo from './App';
+import App from './App';
 
 const root =  document.getElementById('root')
-ReactDOM.render(<ComponentSaludo/>,root);
+ReactDOM.render(<App/>,root);
 
