@@ -1,6 +1,6 @@
 import React from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import CourseGrid from './pages/CourseGrid'
+import Courses from './pages/Courses'
 import Course from './molecules/Course'
 import Home from './pages/Home'
 import Form from './pages/Form'
@@ -20,7 +20,7 @@ const App = () => (
         <Route path="/formulario" component={ Form } />
         <Route path="/cursos/:id" component={ Course } />
         <Route path="/historial/" component={ History } />
-        <Route path="/cursos" component={ CourseGrid } />
+        <Route path="/cursos" component={ Courses } />
         <Route path="/usuarios" component={ Users } />
         <Route path="/noticias" component={ News } />
         <Route component={ CuatroCeroCuatro } />

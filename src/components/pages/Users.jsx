@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import UserCard from '../molecules/UserCard'
+import UserGrid from '../organisms/UserGrid'
 
 class Users extends Component {
     constructor(props) {
@@ -25,17 +25,7 @@ class Users extends Component {
         return (
             <>
             <h2 className="center title">Usuarios</h2>
-            <div className="ed-grid s-grid-2 m-grid-3 l-grid-4">
-                {
-                    users.map(user => 
-                    <UserCard key={user.id}
-                        name={user.name}
-                        username={user.username}
-                        email={user.email}
-                    />
-                ) 
-                }
-            </div>
+            <UserGrid users={ users } />
             </>
         )
     }

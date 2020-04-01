@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
-import NewCard from '../molecules/NewCard'
-import Menu from '../molecules/Menu'
+import NewGrid from '../organisms/NewGrid'
 
 class News extends Component {
     constructor(props) {
@@ -26,18 +25,7 @@ class News extends Component {
         return (
             <>
             <h2 className="center title">Noticias</h2>
-            <div className="ed-grid m-grid-2">
-                {
-                    notices.map(notice =>
-                        <NewCard
-                            name={notice.name}
-                            email={notice.email}
-                            body={notice.body}
-                        />
-                    )  
-                }
-            </div>
-            <Menu/>
+            <NewGrid notices={ notices }/>
             </>
         )
     }
