@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import UserGrid from '../organisms/UserGrid'
+import withLogin from '../HOC/withLogin'
 
 class Users extends Component {
     constructor(props) {
@@ -35,4 +36,4 @@ class Users extends Component {
     }
 }
 
-export default Users
+export default withLogin(Users)

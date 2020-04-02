@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import CourseSelectedGrid from '../organisms/CourseSelectedGrid';
+import withLogin from '../HOC/withLogin';
 
 
 class CourseSelected extends Component { 
@@ -34,5 +35,5 @@ class CourseSelected extends Component {
     }
 }
 
-export default CourseSelected;
+export default withLogin(CourseSelected)
 
