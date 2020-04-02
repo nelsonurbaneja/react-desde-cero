@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CourseExistCard = ({title,image,teacher}) => (
+const CourseSelectedCard = ({title,image,teacher}) => (
     <article className="card">
         <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
                 <img src={ image } alt={ title } /> 
@@ -18,4 +18,4 @@ const CourseExistCard = ({title,image,teacher}) => (
     </article>
 )
 
-export default CourseExistCard
+export default CourseSelectedCard

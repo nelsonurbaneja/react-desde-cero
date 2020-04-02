@@ -1,12 +1,13 @@
 import React, {Component} from 'react'
 
-const withComponentsExist = (PropsCursoActual,WrappedComponent) => {
+const withComponentsExist = (PropsValue,WrappedComponent) => {
   return class WithComponentsExist extends Component {
 
     render() {
-      return this.props[PropsCursoActual] 
-      ? <WrappedComponent  {... this.pros}/>
-      : <h2> Disculpe, el curso que esta buscando no existe ok.</h2>
+      console.log(this.props)
+      return this.props[PropsValue] === undefined
+      ? <h2>Disulpe, lo que intenta buscar no existe</h2>
+      : <WrappedComponent  {...this.props}/>
     }
   }
 }

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import CourseExistCard from '../molecules/CourseExistGrid';
+import CourseSelectedGrid from '../organisms/CourseSelectedGrid';
 
 
-class Course extends Component { 
+class CourseSelected extends Component { 
     constructor(props) {
         super(props)
 
@@ -26,7 +26,7 @@ class Course extends Component {
     render() {
         // Aqui le asigno el valor del estado de mi variable curso a {cursoActual}
         const {cursoActual} = this.state
-        return <CourseExistCard cursoActual={cursoActual} />
+        return <CourseSelectedGrid cursoActual={cursoActual} />
 
     }
     componentDidMount() {
@@ -34,5 +34,5 @@ class Course extends Component {
     }
 }
 
-export default Course;
+export default CourseSelected;
 
