@@ -1,7 +1,7 @@
 import React from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Courses from './pages/Courses'
-import Course from './molecules/Course'
+import CourseExist from './pages/CourseExist'
 import Home from './pages/Home'
 import Form from './pages/Form'
 import CuatroCeroCuatro from './pages/CuatroCeroCuatro'
@@ -18,7 +18,7 @@ const App = () => (
     <Switch>
         <Route path="/" exact component={ Home } />
         <Route path="/formulario" component={ Form } />
-        <Route path="/cursos/:id" component={ Course } />
+        <Route path="/cursos/:id" component={ CourseExist } />
         <Route path="/historial/" component={ History } />
         <Route path="/cursos" component={ Courses } />
         <Route path="/usuarios" component={ Users } />
