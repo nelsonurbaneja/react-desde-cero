@@ -18,7 +18,7 @@ const App = () => (
     <Switch>
         <Route path="/" exact component={ Home } />
         <Route path="/formulario" component={ Form } />
-        <Route path="/cursos/:id" component={ CourseSelected } />
+        <Route path="/cursos/:idName" component={ CourseSelected } />
         <Route path="/historial/" component={ History } />
         <Route path="/cursos" component={ Courses } />
         <Route path="/usuarios" component={ Users } />

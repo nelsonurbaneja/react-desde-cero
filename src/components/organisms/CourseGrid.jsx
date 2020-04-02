@@ -8,6 +8,7 @@ const CourseGrid = ( {courses} ) =>  (
       courses.map( curso =>
       <CourseCard key={curso.id}
           id={curso.id}
+          idName={curso.idName}
           title={curso.title}
           image={curso.image}
           price={curso.price}

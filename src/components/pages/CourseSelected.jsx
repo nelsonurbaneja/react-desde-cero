@@ -20,7 +20,7 @@ class CourseSelected extends Component {
 
         //Aqui guardo en mi prop cursoActual el objeto JSON que me devuelva si el id de mi curso es igual al parametro que le estoy pasando
         this.setState({
-            cursoActual: data.filter( curso => curso.id === parseInt(this.props.match.params.id))[0]
+            cursoActual: data.filter( curso => curso.idName === this.props.match.params.idName)[0]
         })
 
     }
