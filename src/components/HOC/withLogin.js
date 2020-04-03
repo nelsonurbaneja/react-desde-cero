@@ -16,7 +16,7 @@ const withLogin = (WrappedComponent) => {
       const isLoggued = Math.round(Math.random()) //isLoggued obtiene un numero random de 0-1
       console.log(isLoggued)
       this.setState({
-        loggued : isLoggued // a mi estado de la prop loggued le asigno el valor de isLoggued
+        loggued : 1 // a mi estado de la prop loggued le asigno el valor de isLoggued
       })
     }
     render() {

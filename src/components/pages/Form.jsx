@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Banner from '../organisms/Banner'
+import Example from '../atoms/Example'
 
 class Form extends Component {
     constructor(props) {
@@ -61,6 +62,7 @@ class Form extends Component {
                     </div>
                 </div>  
             </form>
+            <Example/>
         </>
         )
     }
