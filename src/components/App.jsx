@@ -17,7 +17,7 @@ const App = () => (
     <Header/>
     <Switch>
         <Route path="/" exact component={ Home } />
-        <Route path="/formulario" component={ Form } />
+        <Route path="/registro" component={ Form } />
         <Route path="/cursos/:idName" component={ CourseSelected } />
         <Route path="/historial/" component={ History } />
         <Route path="/cursos" component={ Courses } />
