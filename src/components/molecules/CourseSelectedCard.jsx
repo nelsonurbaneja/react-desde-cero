@@ -11,8 +11,8 @@ const CourseSelectedCard = ({title,image,teacher}) => (
             </h3>
             <div className="s-mb-2 s-main-center">
                 <div className="card__teacher s-cross-center">
-                  <span className="small">{ teacher }</span>
-              </div>
+                <span className="small">{ teacher }</span>
+            </div>
             </div>
         </div>
     </article>

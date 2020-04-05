@@ -17,4 +17,4 @@ const NewGrid = ( { notices } ) => (
   </div>
 )
 
-export default withLoader("notices",NewGrid)
+export default withLoader("notices","noticias", NewGrid)

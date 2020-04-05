@@ -3,7 +3,7 @@ import CourseCard from '../molecules/CourseCard'
 import withLoader from '../HOC/withLoader'
 
 const CourseGrid = ( {courses} ) =>  (
-  <div className="ed-grid m-grid-4">
+  <div className="ed-grid m-grid-4 grid-courses">
     {
       courses.map( curso =>
       <CourseCard key={curso.id}
@@ -20,4 +20,4 @@ const CourseGrid = ( {courses} ) =>  (
   </div>
 )
 
-export default withLoader("courses",CourseGrid)
+export default withLoader("courses","cursos",CourseGrid)

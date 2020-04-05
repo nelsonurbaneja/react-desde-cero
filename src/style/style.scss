@@ -137,11 +137,14 @@ a {
     }
 
     &:hover {
-         background: $textColor;
+        background: $textColor;
     }
     &:hover {
         @include from(m) {
             background: transparent;
         }
     }
+}
+.btn, .comments, .grid-courses {
+    margin-top: 1rem;
 }
